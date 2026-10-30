@@ -3077,14 +3077,7 @@
                 }
             }
 
-         ```javascript
-openBtn.addEventListener('click', function () {
-    overlay.classList.add('hidden');
-    bgMusic.play().then(() => setMusicState(true))
-        .catch(() => setMusicState(false));
-    document.body.style.overflow = 'auto';
-});
-```
+
             document.body.style.overflow = 'hidden';
             musicToggle.addEventListener('click', function (e) {
                 e.stopPropagation();
