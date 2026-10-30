@@ -3080,19 +3080,8 @@
          ```javascript
 openBtn.addEventListener('click', function () {
     overlay.classList.add('hidden');
-
-    bgMusic.volume = 1;
-    bgMusic.muted = false;
-
-    bgMusic.play()
-        .then(() => {
-            setMusicState(true);
-        })
-        .catch((error) => {
-            console.log('Musik gagal diputar:', error);
-            setMusicState(false);
-        });
-
+    bgMusic.play().then(() => setMusicState(true))
+        .catch(() => setMusicState(false));
     document.body.style.overflow = 'auto';
 });
 ```
